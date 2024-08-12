@@ -88,8 +88,8 @@ jobs:
 
        # Deploy to Vercel only if tests pass
       - name: Install Vercel CLI
-        run: npm install -g vercel
+        run: npm install vercel@latest --no-save
 
       - name: Deploy to Vercel
         if: success()
-        run: vercel --prod --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel --prod --token=${{ secrets.VERCEL_TOKEN }} --yes
