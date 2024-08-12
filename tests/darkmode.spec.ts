@@ -7,6 +7,7 @@ test.beforeEach(async ({ page }) => {
 
 test('darkmode', async ({ page }) => {
 
+  await expect(page.getByAltText('fail_on_purpose')).toBeVisible();
   await expect(page.getByText('Login to meet amazing people')).toBeVisible();
   const text_light = page.getByText('Login to meet amazing people');
   const initialColor_text = await text_light.evaluate(el => {
