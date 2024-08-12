@@ -1,0 +1,36 @@
+/* Change cursor when move item */
+.react-grid-layout .react-grid-item:hover {
+    cursor: move !important;
+}
+
+/* Light mode: placeholder style (replace the red rectangle) */
+.react-grid-layout .react-grid-item.react-grid-placeholder {
+    background: rgb(202, 202, 202) !important;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 35px;
+    opacity: 0.1;
+}
+
+/* Dark mode: placeholder style (replace the red rectangle) */
+.dark .react-grid-layout .react-grid-item.react-grid-placeholder {
+    background: rgb(105, 105, 105) !important;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 35px;
+    opacity: 0.1;
+}
+
+/* change the size and color of the icon that show the item is resizable */
+.react-grid-item > .react-resizable-handle.react-resizable-handle-se::after {
+    position: absolute;
+    right: 1px;
+    bottom: 1px;
+    width: 11px;
+    height: 11px;
+    border-right: 3px solid #ff5757;
+    border-bottom: 3px solid #ff5757;
+    z-index: 20;
+  }
+
+  .react-grid-item > .react-resizable-handle.react-resizable-handle-se {
+    background-image: none !important;
+  }
