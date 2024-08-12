@@ -92,4 +92,4 @@ jobs:
 
       - name: Deploy to Vercel
         if: success()
-        run: vercel --prod --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel --prod --token=${{ secrets.VERCEL_TOKEN }} --confirm
