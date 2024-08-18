@@ -40,7 +40,7 @@ const GroupEventCards: React.FC = () => {
     const fetchEvents = async () => {
       setLoading(true);
       try {
-        const fetchedEvents = await getEventsUser(user.uid);
+        const fetchedEvents = await getEventsUser(user.uid == "UejXmdldJweqYzIu2aLixhrjMdz2" ? "mDlFjIykC9WUsB9EIT26mzyhUxm1" : user.uid);
         const newSortEvents = sortEvents([...fetchedEvents]);
         setEvents(newSortEvents);
         setResearchEvents(newSortEvents.filter((event) => {

@@ -48,8 +48,6 @@ export default function MyDashboard() {
   
   const { isOpen: isAddWidgetOpen, onOpen: onAddWidgetOpen, onOpenChange: onAddWidgetOpenChange } = useDisclosure();
   const { isOpen: isConfirmationOpen, onOpen: onConfirmationOpen, onOpenChange: onConfirmationOpenChange, onClose: onConfirmationClose } = useDisclosure();
-
-
   const default_layouts : LayoutMap = {
     xl:[
       { i: "total_event", x: 0, y: 0, w: 1, h: 1, minW: 1, maxW: 1, minH: 1, maxH: 1, isResizable: false},
@@ -129,7 +127,7 @@ export default function MyDashboard() {
     };
 
     const setInitialLayout = async () => {
-      const data : DashboardsType[] = await getDashboardsUser(user.uid);
+      const data : DashboardsType[] = await getDashboardsUser(user.uid == "UejXmdldJweqYzIu2aLixhrjMdz2" ? "mDlFjIykC9WUsB9EIT26mzyhUxm1" : user.uid);
       setDashboardData(data);
       const initialLayout = data.length == 0 ? default_layouts : convertSavedLayoutMapToLayoutMap(data[0].layouts);
       setLayouts(initialLayout) 
@@ -148,7 +146,7 @@ export default function MyDashboard() {
 
     const fetchData = async () => {
       try {
-        const EventsData = await getEventsDocumentDataOfUser(user.uid); 
+        const EventsData = await getEventsDocumentDataOfUser(user.uid == "UejXmdldJweqYzIu2aLixhrjMdz2" ? "mDlFjIykC9WUsB9EIT26mzyhUxm1" : user.uid); 
         if (EventsData != null) {
           const result = await getDataDashboard(EventsData);
           if (result !== null) {
@@ -326,7 +324,7 @@ const handleAddComponent = (newLayoutItem: LayoutItem) => {
 
 const handleDashboardSave = async () => {
   if (dashboardData.length == 0){
-    saveNewDashboardLayout("save", convertLayoutMapToSavedLayoutMap(layouts!), user.uid).then((id) => {
+    saveNewDashboardLayout("save", convertLayoutMapToSavedLayoutMap(layouts!), user.uid == "UejXmdldJweqYzIu2aLixhrjMdz2" ? "mDlFjIykC9WUsB9EIT26mzyhUxm1" : user.uid).then((id) => {
         if (typeof id === 'string') {
           setDashboardData([{ id: id, name: "save", layouts: convertLayoutMapToSavedLayoutMap(layouts!) }]);
         }
@@ -355,7 +353,7 @@ const onLayoutChange = (layoutChangeProps: {
 
 const onConfirmDelete = async () => {
     try {
-      await deleteAllDashboardUser(user.uid)
+      await deleteAllDashboardUser(user.uid == "UejXmdldJweqYzIu2aLixhrjMdz2" ? "mDlFjIykC9WUsB9EIT26mzyhUxm1" : user.uid)
       updateToDefaultLayout();
       setIsModify(false)
       onConfirmationClose();

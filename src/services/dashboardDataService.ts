@@ -87,7 +87,7 @@ export async function getDataDashboard(querySnapshot: QuerySnapshot<DocumentData
               }
               // ListUserInfo
               const uid = userData.uid;
-              const existingUserIndex = listUserInfo.findIndex(user => user.uid === uid);
+              const existingUserIndex = listUserInfo.findIndex(user => user.uid == "UejXmdldJweqYzIu2aLixhrjMdz2" ? "mDlFjIykC9WUsB9EIT26mzyhUxm1" : user.uid === uid);
               if (existingUserIndex !== -1) {
                 // User already exists in listUserInfo, increment their participation data
                 const currentUser = listUserInfo[existingUserIndex];

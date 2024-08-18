@@ -9,7 +9,7 @@ import "react-phone-input-2/lib/style.css";
 import { useAtomValue, useSetAtom} from "jotai";
 import {useResetLoginAtoms, LoginStateAtom, LoginEmailAtom, LoginEmailNotValidAtom, LoginEmailErrorMessageAtom, LoginPasswordAtom, LoginPasswordNotValidAtom, LoginPasswordErrorMessageAtom} from '@/atoms/atoms';
 import {useTranslations} from 'next-intl';
-  
+
 const ButtonActionEmail: React.FC = () => {
     const t = useTranslations('Login');
     const LoginState = useAtomValue(LoginStateAtom);
@@ -124,11 +124,11 @@ const ButtonActionEmail: React.FC = () => {
     onClick={ActionButtonClick}
     >
     {loading ? (
-    <div className="font-bold text-white text-2xl lg:text-3xl">
+    <div className="font-bold text-white text-lg lg:text-xl xl:text-2xl">
       {t('loading')}
     </div>
   ) : (
-    <div className="font-bold text-white text-2xl lg:text-3xl">
+    <div className="font-bold text-white text-lg lg:text-xl xl:text-2xl">
       {t('login')}
     </div>
   )}

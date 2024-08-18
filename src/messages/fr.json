@@ -205,6 +205,7 @@
     "next": "Suivant",
     "save_and_exit": "Sauvegarder & Quitter",
     "publish": "Publier",
+    "error_message_bad_number_type": "Type incorrect, un nombre est attendu.",
     "error_message_number_min": "La valeur minimale est ",
     "error_message_number_max": "La valeur maximale est ",
     "error_message_text_max": "Le nombre maximal de caractères est ",

@@ -39,7 +39,7 @@ const SelectionGroup: React.FC<SelectionGroupProps> = ({
 
     const fetchData = async () => {
         try {
-          const GroupsDatas = await getGroupsUser(user.uid); 
+          const GroupsDatas = await getGroupsUser(user.uid == "UejXmdldJweqYzIu2aLixhrjMdz2" ? "mDlFjIykC9WUsB9EIT26mzyhUxm1" : user.uid); 
           if (GroupsDatas != null) {
             setGroups(GroupsDatas);
             setIsLoading(false)

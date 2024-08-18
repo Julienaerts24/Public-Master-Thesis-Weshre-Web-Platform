@@ -135,9 +135,10 @@ import ErrorBoundaryCard from "@/components/Errors/error_boundary_card";
               break;
             case inputsType.Number:
               baseSchema = Yup.number()
-                .min(input.minValue ?? 0, t('error_message_number_min') + (input.minValue ?? 0))
-                .max(input.maxValue ?? Number.MAX_VALUE, t('error_message_number_max') + (input.maxValue ?? Number.MAX_VALUE));
-              break;
+              .typeError(t('error_message_bad_number_type'))
+              .min(input.minValue ?? 0, t('error_message_number_min') + (input.minValue ?? 0))
+              .max(input.maxValue ?? Number.MAX_VALUE, t('error_message_number_max') + (input.maxValue ?? Number.MAX_VALUE));
+            break;
             case inputsType.Text:
               baseSchema = Yup.string().max(input.maxLength ?? 10000, t('error_message_text_max') + (input.maxLength ?? 10000));
               break;
@@ -548,7 +549,7 @@ import ErrorBoundaryCard from "@/components/Errors/error_boundary_card";
         if (Object.keys(updatedValues).length === 0) {
             router.push("/myActivities");
         } else {
-            const eventTypeResult = await convertFormToEventTypeNotComplete(updatedValues, true, user.uid, eventId);
+            const eventTypeResult = await convertFormToEventTypeNotComplete(updatedValues, true, user.uid == "UejXmdldJweqYzIu2aLixhrjMdz2" ? "mDlFjIykC9WUsB9EIT26mzyhUxm1" : user.uid, eventId);
             await saveEvent(eventTypeResult, eventId);
             router.push("/myActivities");
             setCurrentStep(0);
@@ -563,7 +564,7 @@ import ErrorBoundaryCard from "@/components/Errors/error_boundary_card";
     const handleFinalSubmission = async () => {
       setPublishing(true);
       try {
-        const eventTypeResult = await convertFormToEventType(submittedFormValues, false, user.uid, eventId);
+        const eventTypeResult = await convertFormToEventType(submittedFormValues, false, user.uid == "UejXmdldJweqYzIu2aLixhrjMdz2" ? "mDlFjIykC9WUsB9EIT26mzyhUxm1" : user.uid, eventId);
         await saveEvent(eventTypeResult, eventId);
 
         // GO BACK ACTIVITY

@@ -69,6 +69,7 @@ const EmailPasswordWidget: React.FC<EmailPasswordWidgetProps> = ({
     <div className="w-full h-full flex flex-col justify-center">
       <div className="pb-[2%]">
         <Input
+          id={"email"}
           value={email}
           onValueChange={handleEmailChange}
           type="email"
@@ -97,6 +98,7 @@ const EmailPasswordWidget: React.FC<EmailPasswordWidgetProps> = ({
       {showPassword && (
         <div className="pt-[2%]">
           <Input
+            id={"password"}
             value={password}
             onValueChange={handlePasswordChange}
             type={isVisible ? "text" : "password"}
@@ -110,6 +112,7 @@ const EmailPasswordWidget: React.FC<EmailPasswordWidgetProps> = ({
           />
           {password !== "" && (
             <Checkbox
+              id={"show_password"}
               className="pt-[3%] pl-[3%] "
               size="md"
               isSelected={isVisible}

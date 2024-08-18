@@ -110,7 +110,7 @@ const ButtonActionVerificationCode: React.FC= () => {
     className="flex h-[60px] justify-center items-center w-4/5 bg-redWS cursor-pointer rounded-[40px] transition duration-300 ease-in-out hover:bg-hoverRedWS"
     onClick={ActionButtonClick}
   >
-    <div className="font-bold text-white text-2xl lg:text-3xl">
+    <div className="font-bold text-white text-lg lg:text-xl xl:text-2xl">
       {t('confirm')}
     </div>
   </Button>

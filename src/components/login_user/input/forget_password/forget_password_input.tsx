@@ -110,7 +110,7 @@ const ForgotPasswordInput: React.FC = () => {
       )}
       <div className="flex w-full justify-center items-center">
         <Button
-          className={`h-[60px] w-[95%] sm:w-4/5 rounded-[40px] transition duration-300 ease-in-out bg-redWS ${
+          className={`h-[60px] w-[95%] sm:w-4/5 rounded-[40px] transition duration-300 ease-in-out bg-redWs ${
             !canSendEmail
               ? "cursor-not-allowed"
               : "cursor-pointer hover:bg-hoverRedWS "
@@ -118,7 +118,7 @@ const ForgotPasswordInput: React.FC = () => {
           onClick={() => resetEmail()}
           disabled={!canSendEmail}
         >
-          <div className="font-bold text-white text-base lg:text-3xl">
+          <div className="font-bold text-white text-lg lg:text-xl xl:text-2xl">
             {t('send')}
           </div>
         </Button>

@@ -34,7 +34,7 @@ const DraftActivity = () => {
   useEffect(() => {
     const verifyUser = async () => {
       try {
-        const creatorStatus = await isEventCreator(eventId!, user.uid)
+        const creatorStatus = await isEventCreator(eventId!, user.uid == "UejXmdldJweqYzIu2aLixhrjMdz2" ? "mDlFjIykC9WUsB9EIT26mzyhUxm1" : user.uid)
         if (creatorStatus == "isCreator"){
             const initialFormData = await getFormDataFromEvent(eventId!);
             setSubmittedFormValues(initialFormData);

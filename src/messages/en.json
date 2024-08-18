@@ -206,6 +206,7 @@
     "next": "Next",
     "save_and_exit": "Save & Exit",
     "publish": "Publish",
+    "error_message_bad_number_type": "Incorrect type, a number is waited.",
     "error_message_number_min": "Minimal value is ",
     "error_message_number_max": "Maximal value is ",
     "error_message_text_max": "Maximal number of characters is  ",

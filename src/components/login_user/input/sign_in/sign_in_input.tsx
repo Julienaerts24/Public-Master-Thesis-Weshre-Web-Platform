@@ -135,7 +135,7 @@ const SignInInput: React.FC = () => {
           className="h-[60px] w-4/5 bg-redWS cursor-pointer rounded-[40px] transition duration-300 ease-in-out hover:bg-hoverRedWS"
           onClick={SignUpButtonClick}
         >
-          <div className="font-bold text-white text-2xl lg:text-3xl">
+          <div className="font-bold text-white text-lg lg:text-xl xl:text-2xl">
             {t('create_account')}
           </div>
         </Button>
