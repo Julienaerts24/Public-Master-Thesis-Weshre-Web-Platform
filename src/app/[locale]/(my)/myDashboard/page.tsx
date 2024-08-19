@@ -1,5 +1,7 @@
 'use client'
 
+import { getPerformance, trace } from "firebase/performance"; 
+
 import 'react-grid-layout/css/styles.css';
 import 'react-resizable/css/styles.css';
 import './/custom_movable_item.css'
@@ -122,6 +124,10 @@ export default function MyDashboard() {
   }
 
   useEffect(() => {
+    const performance = getPerformance();
+    const dashboardTrace = trace(performance, 'dashboard_load_time');
+    dashboardTrace.start();
+
     const handleResize = () => {
       setWidth(window.innerWidth < 640 ? window.innerWidth : window.innerWidth - 80);
     };
@@ -142,6 +148,7 @@ export default function MyDashboard() {
       setGridSm(computeGrid(initialLayout.sm, 3));
       setGridPhone(computeGrid(initialLayout.phone, 2));
       setIsLoading(false);
+      dashboardTrace.stop();
     }
 
     const fetchData = async () => {
