@@ -74,7 +74,7 @@ export const convertToLayoutItem = (savedItem: SavedLayoutItemType): LayoutItem 
       {component: TopNationalitiesCard, layout:{ i: "top_nationalities", x: 0, y: 0, w: 2, h: 1, minW: 1, maxW: 4, minH: 1, maxH: 1}},
       {component: TopParticipantsCard, layout:{ i: "top_20", x: 0, y: 0, w: 1, h: 2, minW: 1, maxW: 1, minH: 2, maxH: 4}},
       // {component: TotalESNCard, layout:  { i: "esn_card", x: 0, y: 0, w: 2, h: 1, minW: 1, maxW: 2, minH: 1, maxH: 1}},
-      {component: PeriodicGraphCard, layout:{ i: "graph", x: 0, y: 0, w: 2, h: 2, minW: 2, maxW: 2, minH: 2, maxH: 2, isResizable: false}},
+      {component: PeriodicGraphCard, layout:{ i: "graph", x: 0, y: 0, w: 2, h: 2, minW: 2, maxW: 2, minH: 2, maxH: 4}},
       {component: SalesCard, layout:  { i: "sales", x: 0, y: 0, w: 2, h: 3, minW: 2, maxW: 2, minH: 3, maxH: 3, isResizable: false}},
     ];
   };

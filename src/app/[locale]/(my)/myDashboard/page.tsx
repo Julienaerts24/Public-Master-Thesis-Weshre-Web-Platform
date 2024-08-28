@@ -57,7 +57,7 @@ export default function MyDashboard() {
       { i: "total_ticket", x: 2, y: 0, w: 1, h: 1, minW: 1, maxW: 1, minH: 1, maxH: 1, isResizable: false},
       { i: "top_nationalities", x: 3, y: 0, w: 2, h: 1, minW: 1, maxW: 4, minH: 1, maxH: 1},
       { i: "top_20", x: 4, y: 1, w: 1, h: 3, minW: 1, maxW: 2, minH: 2, maxH: 4},
-      { i: "graph", x: 0, y: 1, w: 2, h: 3, minW: 2, maxW: 2, minH: 2, maxH: 3},
+      { i: "graph", x: 0, y: 1, w: 2, h: 3, minW: 2, maxW: 2, minH: 2, maxH: 4},
       { i: "sales", x: 2, y: 1, w: 2, h: 3, minW: 2, maxW: 2, minH: 3, maxH: 3, isResizable: false},
     ],
     lg:[
@@ -66,7 +66,7 @@ export default function MyDashboard() {
       { i: "total_ticket", x: 2, y: 0, w: 1, h: 1, minW: 1, maxW: 1, minH: 1, maxH: 1, isResizable: false},
       { i: "top_nationalities", x: 2, y: 1, w: 1, h: 1, minW: 1, maxW: 4, minH: 1, maxH: 1},
       { i: "top_20", x: 4, y: 0, w: 1, h: 2, minW: 1, maxW: 2, minH: 2, maxH: 4},
-      { i: "graph", x: 2, y: 2, w: 2, h: 2, minW: 2, maxW: 2, minH: 2, maxH: 3},
+      { i: "graph", x: 2, y: 2, w: 2, h: 2, minW: 2, maxW: 2, minH: 2, maxH: 4},
       { i: "sales", x: 0, y: 1, w: 2, h: 3, minW: 2, maxW: 2, minH: 3, maxH: 3, isResizable: false},
     ],
     sm:[
@@ -75,7 +75,7 @@ export default function MyDashboard() {
       { i: "total_ticket", x: 2, y: 0, w: 1, h: 1, minW: 1, maxW: 1, minH: 1, maxH: 1, isResizable: false},
       { i: "top_nationalities", x: 0, y: 1, w: 3, h: 1, minW: 1, maxW: 4, minH: 1, maxH: 1},
       { i: "top_20", x: 2, y: 2, w: 1, h: 4, minW: 1, maxW: 2, minH: 2, maxH: 4},
-      { i: "graph", x: 0, y: 1, w: 2, h: 2, minW: 2, maxW: 2, minH: 2, maxH: 3},
+      { i: "graph", x: 0, y: 1, w: 2, h: 2, minW: 2, maxW: 2, minH: 2, maxH: 4},
       { i: "sales", x: 0, y: 3, w: 2, h: 2, minW: 2, maxW: 2, minH: 2, maxH: 2, isResizable: false},
     ],
     phone:[
@@ -84,7 +84,7 @@ export default function MyDashboard() {
       { i: "top_nationalities", x: 1, y: 0, w: 1, h: 1, minW: 1, maxW: 4, minH: 1, maxH: 1},
       { i: "total_ticket", x: 0, y: 1, w: 1, h: 1, minW: 1, maxW: 1, minH: 1, maxH: 1, isResizable: false},
       { i: "top_20", x: 0, y: 6, w: 2, h: 3, minW: 2, maxW: 2, minH: 2, maxH: 4},
-      { i: "graph", x: 0, y: 4, w: 2, h: 2, minW: 2, maxW: 2, minH: 2, maxH: 3},
+      { i: "graph", x: 0, y: 4, w: 2, h: 2, minW: 2, maxW: 2, minH: 2, maxH: 4},
       { i: "sales", x: 0, y: 2, w: 2, h: 2, minW: 2, maxW: 2, minH: 2, maxH: 2, isResizable: false},
     ],
   }
