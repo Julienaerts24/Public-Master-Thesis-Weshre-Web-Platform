@@ -110,7 +110,7 @@ const ForgotPasswordInput: React.FC = () => {
       )}
       <div className="flex w-full justify-center items-center">
         <Button
-          className={`h-[60px] w-[95%] sm:w-4/5 rounded-[40px] transition duration-300 ease-in-out bg-redWs ${
+          className={`h-[60px] w-[95%] sm:w-4/5 rounded-[40px] transition duration-300 ease-in-out bg-redWS ${
             !canSendEmail
               ? "cursor-not-allowed"
               : "cursor-pointer hover:bg-hoverRedWS "
