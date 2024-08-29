@@ -9,11 +9,13 @@ import PhoneLogin from "@/components/login_user/phone_icon_login";
 import LoginInput  from "@/components/login_user/input/login/login_input";
 import ButtonAction from "@/components/login_user/button_action/button_action";
 import {useTranslations} from 'next-intl';
+import {useLocale} from 'next-intl';
 
 export default function Login() {
   const t = useTranslations('Login');
   const [errorGoogleLogin, setErrorGoogleLogin] = useState(false);
   const [errorAppleLogin, setErrorAppleLogin] = useState(false);
+  const locale = useLocale();
 
   useEffect(() => {
     const handleClick = () => {
@@ -27,7 +29,7 @@ export default function Login() {
       document.removeEventListener('click', handleClick);
     };
   }, []);
-  
+
   return (
     <SignContainer
         container={
@@ -55,10 +57,10 @@ export default function Login() {
             <ButtonAction />
             <div className="flex flex-row justify-between items-center underline w-4/5 text-[12px] md:text-base lg:text-lg xl:text-xl text-redWS cursor-pointer pt-2">
               <div className="hover:text-hoverRedWS">
-                <Link href="/sign_up">{t('sign_up')} </Link>
+                <Link href={`/${locale}/sign_up`}> {t('sign_up')} </Link>
               </div>
               <div className="hover:text-hoverRedWS">
-                <Link href="/forgot_password"> {t('forgot_password')} </Link>
+                <Link href={`/${locale}/forgot_password`}> {t('forgot_password')} </Link>
               </div>
             </div>
             <div id="recaptcha-container"></div>

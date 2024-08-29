@@ -9,6 +9,7 @@ import {useTranslations} from 'next-intl';
 import Link from "next/link";
 import {useResetLoginAtoms} from '@/atoms/atoms';
 import { auth } from "@/firebase/config";
+import {useLocale} from 'next-intl';
 
 const SignInInput: React.FC = () => {
   const t = useTranslations('SignUp');
@@ -20,7 +21,8 @@ const SignInInput: React.FC = () => {
   const [passwordErrorMessage, setPasswordErrorMessage] = useState<JSX.Element>();
   const router = useRouter();
   const { signUp } = useAuth();
-
+  const locale = useLocale();
+  
   const validateEmail = (value: string) =>
     value.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i);
 
@@ -140,7 +142,7 @@ const SignInInput: React.FC = () => {
           </div>
         </Button>
         <div className="text-center underline w-4/5 text-[14px] md:text-base lg:text-lg xl:text-xl text-redWS cursor-pointer pt-2 hover:text-hoverRedWS">
-          <Link href="/login"> {t("login_here")} </Link>
+          <Link href={`/${locale}/login`}> {t('login_here')} </Link>
         </div>
       </div>
     </>
